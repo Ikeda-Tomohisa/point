@@ -1,0 +1,605 @@
+@charset "UTF-8";
+/* reset */
+body, h1, h2, h3, h4, h5, h6, p, address,
+ul, ol, li, dl, dt, dd, img, form, table, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 100%;
+	text-align: left;
+	list-style-type: none;
+	border-collapse: collapse;
+}
+
+textarea { font-size: 100%; vertical-align:middle;}
+img { border-style: none; display: block; }
+hr { display: none; }
+em{font-style: normal}
+input{line-height:auto;vertical-align:middle;}
+strong.more{color:#c30}
+a{text-decoration: none;}
+
+body {
+	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/* end reset */
+
+/* header login logout */
+.login_logout {
+    width: 100%;
+    height: 60px;
+    background-color: #b1ffb1;
+}
+.app_name {
+    line-height: 60px;
+    margin-left: 30px;
+}
+
+/* footer */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #b1ffb1;
+    line-height: 60px;
+    text-align: right;
+    padding-right: 30px;
+}
+
+/* header general_user */
+.first_header {
+    width: 100%;
+    height: 60px;
+    background-color: #b1ffb1;
+    display: flex;
+    justify-content: space-between;
+}
+.app_name a {
+    color: black;
+    font-size: 18px;
+}
+.user_name {
+    line-height: 60px;
+}
+.header_name {
+    font-weight: 500;
+    font-size: 18px;
+}
+.user_info {
+    width: 40px;
+    height: 40px;
+    margin: 10px 30px 0 0;
+    border-radius: 50%;
+}
+.user_info_img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.second_header {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+}
+.second_header a, .second_header div {
+    width: 50%;
+    color: black;
+    font-size: 18px;
+    text-align: center;
+    line-height: 40px;
+    background-color: #e6e6e6;
+    border: 1px solid #000;
+}
+
+/* login form logout session_out */
+.form_wrap, .logout_wrap, .session_out_wrap, .error419_wrap {
+    width: 100%;
+    height: calc(100vh - 120px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form_box {
+    width: 30%;
+}
+.logout_box, .session_out_box, .error419_box {
+    width: 80%;
+}
+.form_box h2 {
+    text-align: center;
+    font-size: 30px;
+}
+.logout_box h2 {
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: calc(1em / 8);
+}
+.session_out_box h2 {
+    text-align: center;
+    font-size: 30px;
+}
+.error419_box h2 {
+    text-align: center;
+    font-size: 30px;
+}
+.session_out_box button {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: calc(1em / 11);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.form_box a {
+    display: block;
+    text-align: center;
+    text-decoration: underline;
+    color: black;
+}
+.logout_box button {
+    display: block;
+    margin: 0 auto;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.error419_box button {
+    display: block;
+    margin: 0 auto;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.login_textbox {
+    height: 30px;
+    width: 100%;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+.login_button {
+    display: block;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-size: 20px;
+    height: 40px;
+    border: 1.5px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* index attendance leaving */
+.main_wrap {
+    display: flex;
+    justify-content: center;
+}
+.main {
+    width: 40%;
+    min-width: 300px;
+    margin-top: 40px;
+}
+.current_time {
+    width: 100%;
+    margin-bottom: 40px;
+}
+#year_month_day {
+    font-size: 30px;
+    text-align: center;
+}
+#time {
+    font-size: 50px;
+    text-align: center;
+}
+.state {
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 40px;
+}
+.leaving_now {
+    width: 100%;
+    color: red;
+    border: 2px solid red;
+    border-radius: 10px;
+}
+.attendance_now {
+    width: 100%;
+    color: green;
+    border: 2px solid green;
+    border-radius: 10px;
+
+}
+.state_button form input {
+    width: 100%;
+    font-size: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* attendance leaving */
+.attendance_main, .leaving_main {
+    width: 60%;
+    min-width: 340px;
+    margin: 30px auto 0;
+}
+.attendance_main h2, .leaving_main h2 {
+    text-align: center;
+    font-size: 40px;
+}
+.attendance_main button, .leaving_main button {
+    display: block;
+    margin: 0 auto;
+    font-size: 40px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* user_admin */
+.user_admin_main {
+    width: 70%;
+    margin: 30px auto 0;
+    padding-bottom: 60px;
+    box-sizing: border-box;
+}
+.user_admin_main h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+.search_add {
+    display: flex;
+    justify-content: space-between;
+}
+.users_table {
+    width: 100%;
+    margin: 5% auto;
+}
+tr.table_column th {
+    background-color: #a3a3a3;
+    color: #ffffff;
+    text-align: center;
+    padding: 2px 10px;
+}
+tr.table_value:nth-child(even) td {
+    background-color: #e0e0e0;
+    padding: 2px 10px;
+}
+tr.table_value:nth-child(odd) td {
+    background-color: #f0f0f0;
+    padding: 2px 10px;
+}
+tr.table_value td.admin_flg {
+    text-align: center;
+}
+.users_table, .users_table th, .users_table td {
+    border: 1px solid #ffffff;
+    text-align: center;
+}
+.users_table td form {
+    text-align: center;
+}
+.link {
+    border: none;
+    background-color: transparent;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+/* add_user */
+.add_user_main {
+    width: 60%;
+    margin: 30px auto 0;
+}
+.add_user_main h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+.add_user_main a {
+    display: block;
+    text-align: center;
+}
+.add_user_table {
+    margin: 30px auto 0;
+}
+.add_user_table th {
+    width: 220px;
+}
+.add_user_table th, .add_user_table td {
+    padding: 5px 10px;
+}
+.add_user_table td input, .add_user_table td select {
+    height: 30px;
+}
+
+/* edit_user */
+.edit_user_main {
+    width: 30%;
+    margin: 30px auto 0;
+}
+.edit_user_main h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+.edit_user_main a {
+    display: block;
+    text-align: center;
+}
+.red {
+    color: red;
+    text-align: center;
+}
+.edit_user_table {
+    width: 80%;
+    margin: 30px auto 0;
+}
+.edit_user_table th {
+    padding: 10px 10px;
+}
+.input_box {
+    width: 150px;
+    height: 30px;
+}
+.center {
+    display: block;
+    margin: 0 auto;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.center_admin {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/* user_info */
+.user_info_main {
+    width: 40%;
+    min-width: 300px;
+    margin: 30px auto 0;
+    padding-bottom: 60px;
+    box-sizing: border-box;
+}
+.user_info_main h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+.user_info_table {
+    width: 100%;
+}
+.bold {
+    font-weight: bold;
+}
+.user_info_table td {
+    padding: 5px 10px;
+}
+.user_info_table td.pass_change_button {
+    vertical-align: bottom;
+}
+.user_info_table td.pass_change_button button {
+    font-size: 18px;
+    border: 1.5px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.logout_button {
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    font-size: 20px;
+    border: 1.5px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* pass_change */
+.pass_change_main {
+    width: 60%;
+    margin: 30px auto 0;
+    padding-bottom: 60px;
+    box-sizing: border-box;
+}
+.pass_change_main h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+.pass_change_table {
+    margin: 30px auto 0;
+}
+.pass_change_table th {
+    width: 220px;
+}
+.pass_change_table th, .pass_change_table td {
+    padding: 5px 10px;
+}
+.pass_change_table td input {
+    height: 30px;
+}
+input.change {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    font-size: 20px;
+    border: 1.5px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* pass_change_complete */
+.pass_change_complete_main {
+    width: 60%;
+    margin: 30px auto 0;
+    padding-bottom: 60px;
+    box-sizing: border-box;
+}
+.pass_change_complete_main h2 {
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: calc(1em / 7);
+}
+.pass_change_complete_main button {
+    display: block;
+    margin: 0 auto;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* detail */
+.detail_main {
+    width: 50%;
+    margin: 30px auto 0;
+    padding-bottom: 60px;
+    box-sizing: border-box;
+}
+.detail_main h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.csv {
+    display: flex;
+    justify-content: flex-end;
+}
+.csv_button {
+    width: 90px;
+    height: 45px;
+}
+.times_table {
+    width: 100%;
+    margin: 5% auto;
+}
+.times_table, .times_table th, .times_table td {
+    border: 1px solid #ffffff;
+    text-align: center;
+}
+.times_table td form {
+    text-align: center;
+}
+
+/* edit_detail */
+.edit_detail_main {
+    width: 50%;
+    margin: 30px auto 0;
+}
+.edit_detail_main h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+.edit_detail_main a {
+    display: block;
+    text-align: center;
+}
+.edit_detail_table {
+    width: 60%;
+    margin: 30px auto 0;
+}
+.edit_detail_table th {
+    padding: 10px 10px;
+}
+.edit_detail_table tr {
+    margin-bottom: 10px;
+}
+.datetime_box {
+    padding-bottom: 10px;
+    vertical-align: bottom;
+}
+
+/* point */
+.point_main {
+    width: 80%;
+    min-width: 660px;
+    margin: 30px auto 0;
+    padding-bottom: 60px;
+    box-sizing: border-box;
+}
+.point_main h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.product_item_wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.product_item {
+    width: 200px;
+}
+
+/* product purchase */
+.product_main_wrap {
+    display: flex;
+    justify-content: center;
+}
+.product_main {
+    width: 75%;
+    margin: 30px auto 0;
+    padding-bottom: 60px;
+    box-sizing: border-box;
+}
+.product {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.product_photo {
+    padding: 0 30px;
+}
+.product_name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.required_point {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* purchase_complete */
+.purchase_complete_main {
+    width: 30%;
+    margin: 30px auto 0;
+}
+.purchase_complete_main h2 {
+    text-align: center;
+    font-size: 30px;
+}
+.purchase_complete_main button {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
