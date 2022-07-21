@@ -47,4 +47,4 @@ laravel：9.19.0
 データベース名：point  
 テーブル：  
 お使いのphpMyAdminに**point.sql**をインポートしていただければお使いになれると思います。  
-また、pointディレクトリ内の**.env**ファイルのDB_PASSWORDをお使いのDBパスワード変更してください。  
+また、pointディレクトリ内の__.env__ファイルのDB_PASSWORDをお使いのDBパスワード変更してください。  
