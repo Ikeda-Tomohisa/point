@@ -35,6 +35,11 @@ ID：SO0001（エスオー0001）
 ※その他全ユーザーのパスワードもpasswordです。  
 ※ユーザーの管理者変更はphpMyAdminから直接変更してください。  
 
+## データベース
+データベース名：point  
+テーブル：お使いのphpMyAdminに **point.sql** をインポートしていただければお使いになれると思います。  
+また、pointディレクトリ内の .**env** ファイルのDB_PASSWORDをお使いのDBパスワード変更してください。  
+
 ## 開発環境
 XAMPP：8.1.5  
 php：8.1.5  
@@ -42,8 +47,3 @@ Apache：2.4.53 (Win64)
 phpmyadmin：5.2.0  
 MariaDB：10.4.24  
 laravel：9.19.0  
-
-## データベース
-データベース名：point  
-テーブル：お使いのphpMyAdminに **point.sql** をインポートしていただければお使いになれると思います。  
-また、pointディレクトリ内の .**env** ファイルのDB_PASSWORDをお使いのDBパスワード変更してください。  
