@@ -743,24 +743,30 @@ class UserController extends Controller
                 $stream = fopen('php://output', 'w');
                 stream_filter_prepend($stream,'convert.iconv.utf-8/cp932//TRANSLIT');
 
-                $head = ['ID', '出勤/退勤', '日付', '時間'];
+                $head = ['出勤/退勤', '日付', '時間'];
                 fputcsv($stream, $head);
 
                 $data = DB::table('times')->where('user_id', $user_id)
                                   ->select([
-                                    'id',
                                     'attendance_flg',
                                     'date',
                                     'time',
                                   ])
                                   ->get();
                 foreach ($data as $time) {
-                    fputcsv($stream,[
-                        $time->id,
-                        $time->attendance_flg,
-                        $time->date,
-                        $time->time
-                    ]);
+                    if ($time->attendance_flg == 0) {
+                        fputcsv($stream,[
+                            "退勤",
+                            $time->date,
+                            $time->time
+                        ]);
+                    } else if ($time->attendance_flg == 1) {
+                        fputcsv($stream,[
+                            "出勤",
+                            $time->date,
+                            $time->time
+                        ]);
+                    }
                 }
                 fclose($stream);
             },
